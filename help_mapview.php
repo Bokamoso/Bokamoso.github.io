@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>HELP
+</title>
+
+<link rel="stylesheet" href="css/normalize.css">
+ <link rel="stylesheet" href="css/style.css">
+ <style>
+
+body{
+	
+	background-image:url("images/c.jpg");
+	
+}
+
+</style>
+</head>
+<body>
+
+
+<h1>MONTSAMAISA</h1>
+
+
+<div class="form">
+<div class="tab-content">
+
+
+<ul class="tab-group">
+<li class="tab active"><a href = "index.php">HOME</a></li>
+
+<li class="tab"><a href = "mapview.php">BACK TO MAP</a></li>
+</ul>
+</div>
+<p ><font color="white">Welcome to Montsamaisa</font></p>
+<p ><font color="white">A Smart Assistive Cane for the Visually Impaired</font></p>
+<br> </br>
+<p ><font color="white"> This page displays the map showing the plotted route from the current location to the specified 
+location entered in the previous page.</font></p>
+<p><font color="white"> To upload the route directions to the walking cane, press the < upload to cane > button</p>
+<p><font color="white"> Now press the back to map button to go back to the plotted map page </p>
+</div>
+
+
+
+
+
+</body>
+</html>

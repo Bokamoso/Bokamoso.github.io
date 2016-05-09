@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+			<title>HOME</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+			<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h1>
+			MONTSAMAISA
+		</h1>
+		<div class="form">
+		<div class="tab-content">
+		<ul>
+			<table style="width:100%">
+				<tr>
+					<th><a href = "index.php"> HOME</a> </th>
+					<th><a href = "help_inputlocation.php"> HELP </a> </th>
+					<!--<th><a href = "mapview.php"> MAP VIEW</a> </th> -->
+				</tr>
+
+			</table>
+		</ul>
+		
+	<form name="login_form" method="post" action="mapview.php">
+		
+		<fieldset>
+			<legend><font color="white">Enter Location Details</legend>
+				</br>
+				<label for="L_name"></label>
+				Location:
+                <select name="Location" class="L_name">
+					<?php # use php to populate
+                        require_once('include/mysqli_connect.php');
+                        $q = "SELECT * FROM locations";
+                        $r = @mysqli_query($dbc, $q);
+                        
+                        while($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
+                            echo '<option name="' . $row['location_name'] . '">' . $row['location_name'] . '</option>';
+                        }
+                    ?>
+
+				</select>
+				</br>
+			
+
+		</fieldset>
+		<br>
+		<div class="subSearch">
+			<input type="submit" name="submit" value="Search" />
+			<input type="hidden" name="submitted" value="TRUE" />
+        </div>
+    </form>
+
+</div>
+</div>
+	</body>
+</html>
